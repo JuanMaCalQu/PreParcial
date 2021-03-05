@@ -24,4 +24,11 @@ public class Plan {
     }
 
 
+    public double averageBeats() {
+        double wab = 0;
+        for (Week w: this.weeks)
+            wab =+ w.averageBeats();
+
+        return this.weeks.size() == 0 ? 0 : wab / this.weeks.size();
+    }
 }
